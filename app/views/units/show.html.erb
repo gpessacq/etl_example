@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @unit.price %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @unit.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @unit.description %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @unit.area %>
+</p>
+
+<p>
+  <strong>Uom:</strong>
+  <%= @unit.uom %>
+</p>
+
+<%= link_to 'Edit', edit_unit_path(@unit) %> |
+<%= link_to 'Back', units_path %>
