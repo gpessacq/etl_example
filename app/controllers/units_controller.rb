@@ -3,7 +3,6 @@ class UnitsController < ApplicationController
 
   def index
     # Extract
-    @stream1 = JSON.parse(unit_api_call)
     @stream = JSON.parse(unit_api_call)
     # Transform
     @clean_units = clean_units_from_api(@stream)

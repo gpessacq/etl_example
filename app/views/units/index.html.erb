@@ -2,6 +2,13 @@
 
 <h1>Units</h1>
 
+<h2>Units from the API:</h2>
+<%= @stream unless @stream.nil? %>
+
+<hr>
+<h2>Clean units:</h2>
+<%= @clean_units unless @clean_units.nil? %>
+
 <table style="border: 1px solid black">
   <thead>
     <tr>
@@ -13,22 +20,6 @@
       <th colspan="3"></th>
     </tr>
   </thead>
-
-  <h2>Units from the API:</h2>
-  <%= @stream1 unless @stream1.nil? %>
-
-  <h2>Units PARSED:</h2>
-    <% unless @stream.blank? %>
-      <% @stream.each do |line| %>
-        PRICE: <%= line["name"] %><br>
-        CLASS: <%= line["name"].class %><br>
-      <% end %>
-      NEW LINE<br>
-    <% end %>
-<hr>
-  <h2>Clean units:</h2>
-  <%= @clean_units unless @clean_units.nil? %>
-
   <tbody>
     <% @units.each do |unit| %>
       <tr>
