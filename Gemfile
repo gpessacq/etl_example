@@ -62,5 +62,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'therubyracer', '~> 0.12'
-gem 'etl', path: 'lib/etl'
+# gem 'etl', path: 'lib/etl'
 gem 'rest-client'
+gem 'light-service'
