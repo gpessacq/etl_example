@@ -1,4 +1,4 @@
-class Actions::InsertUnits
+class InsertUnits
   extend LightService::Action
 
   expects :result

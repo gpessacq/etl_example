@@ -1,4 +1,4 @@
-class Actions::CleanUnitsFromApi
+class CleanUnitsFromApi
   extend LightService::Action
 
   expects :result
