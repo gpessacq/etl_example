@@ -6,8 +6,8 @@ class UnitApiCall
 
   executed do |context|
     begin
-
-      context.result = JSON.parse(RestClient.get("#{ENV['BASE_URL']}/units.json", {accept: :json}))
+      # Here I call examples_app where the data to be used in the etl process is extracted
+      context.result = JSON.parse(RestClient.get("#{ENV['BASE_URL']}/#{ENV['END_POINT']}", {accept: :json}))
     rescue
       Rails.logger.info "***>>> Error calling the unit API @: #{ENV['BASE_URL']}/units.json"
       context.result = nil
@@ -15,5 +15,3 @@ class UnitApiCall
     end
   end
 end
-
-#{ENV['BASE_URL']}

@@ -1,14 +1,22 @@
-ETL Starter Application
-=======================
+ETL Example
 
-Rails application with just enough code to start AELOGICA's [ETL exercise](https://git.appexpress.io/open-source/etl-exercise).
+This Ruby on Rails application demonstrates a simple ETL example using the [light-service]https://github.com/adomokos/light-service gem pattern
 
 ### Prerequisites
 
-- at least Ruby 2.3.1
+1. Have the examples_app installed and running, which serves as the source of the information to be extracted by the ETL Example application:
+[https://github.com/gpessacq/example_app]https://github.com/gpessacq/example_app
+
 
 ### Instructions
 
-1. Clone from https://git.appexpress.io/open-source/etl-starter-app.git
-1. Install gems
-1. Run application
+1. An enviroment variable **BASE_URL** with the base url of the example_app needs to be defined. 
+For instance:
+
+`export BASE_URL=localhost:3100`
+
+2. An environment variable **END_POINT** with the endpoint to be queried, in this case, using the example_app:
+
+`export BASE_URL=units.json`
+
+

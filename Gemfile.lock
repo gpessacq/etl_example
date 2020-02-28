@@ -95,7 +95,7 @@ GEM
     io-like (0.3.1)
     jbuilder (2.10.0)
       activesupport (>= 5.0.0)
-    libv8 (3.16.14.19)
+    libv8 (3.16.14.19-x86_64-linux)
     light-service (0.12.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -230,7 +230,6 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   puma (~> 3.11)
   rails (~> 5.2.1)
-  rest-client
   sass-rails (~> 5.0)
   selenium-webdriver
   spring
@@ -243,4 +242,4 @@ DEPENDENCIES
   web-console (>= 3.3.0)
 
 BUNDLED WITH
-   1.17.2
+   2.1.4

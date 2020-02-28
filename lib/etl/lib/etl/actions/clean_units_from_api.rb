@@ -6,6 +6,7 @@ class CleanUnitsFromApi
 
   executed do |context|
     unless context.result.blank?
+      # Just an example change of the received data to account for the eTl
       context.result.each do |line|
         line["area"] = (line["area"] * 3.28).round(2)
         line["uom"] = "feet"
