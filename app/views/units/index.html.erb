@@ -1,8 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Units</h1>
+<h1>ETL example application</h1>
 
-<% unless @units.nil? %>
+<h3>Units in database:</h3>
+
+<% if @units.nil? %>
+  0 Units
+<% else %>
   <table style="border: 1px solid black">
     <thead style="border: 1px solid black">
       <tr>
@@ -29,3 +33,7 @@
   </table>
   <%= @units.count %> Units
 <% end %>
+
+<hr>
+
+<%= button_to 'Extract Units from example_app', extract_units_path, method: "get" %>

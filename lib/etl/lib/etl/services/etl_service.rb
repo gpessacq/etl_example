@@ -6,8 +6,8 @@ require_relative "../actions/unit_api_call"
 class EtlService
   extend LightService::Organizer
 
-  def self.call(base_url:)
-    with(base_url: base_url).reduce(
+  def self.call(end_point:)
+    with(end_point: end_point).reduce(
       UnitApiCall,
       CleanUnitsFromApi,
       InsertUnits

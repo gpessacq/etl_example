@@ -3,16 +3,21 @@ class UnitsController < ApplicationController
   before_action :set_unit, only: [:show]
 
   def index
-    organizer_call = EtlService.call(base_url: ENV['BASE_URL'])
-    if organizer_call.failure?
-      render :index, notice: "There was a problem in the ETL process"
-    else
-      @units = Unit.all
-      render :index, notice: "ETL process executed correctly"
-    end  
+    @units = Unit.all
   end
 
   def show
+  end
+
+  def extract_units
+    organizer_call = EtlService.call(end_point: ENV['END_POINT'])
+    if organizer_call.failure?
+      flash.notice =  "There was a problem in the ETL process"
+      redirect_to units_path
+    else
+      flash.notice = "ETL process executed correctly"
+      redirect_to units_path
+    end  
   end
 
   private
